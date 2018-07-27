@@ -17,6 +17,8 @@
 
     <input type="button" value="change" onclick="change('testPlanProject.json')">
 
+    <input type="button" value="test" onclick="test()">
+
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
@@ -24,6 +26,8 @@
   </body>
 
   <script src="./datasource.js" ></script>
+
+  <script src="./test/test.js" ></script>
 
   <script>
       function myclick(){
@@ -41,6 +45,21 @@
           console.log(datasource.selectJason("testPlanProject.json"));
           console.log(datasource.queryValueByKey("version"));
       }
+
+      function test() {
+          const aa = {
+              posts: [
+                  {id: 1, body: 'one', published: false},
+                  {id: 2, body: 'two', published: true}
+              ],
+              comments: [
+                  {id: 1, body: 'foo', postId: 1},
+                  {id: 2, body: 'bar', postId: 2}
+              ]
+          }
+          console.log(_.getbyid(aa.posts, 1))
+      }
+
 
   </script>
 </html>
