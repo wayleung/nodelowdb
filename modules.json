@@ -1,0 +1,49 @@
+[{
+	"moduleId": "1",
+	"moduleName": "testBaiduModule",
+	"testCases": [{
+		"caseId": "case1",
+		"caseName": "casename1",
+		"scripts": [{
+			"scriptId": null,
+			"step": "1",
+			"keword": "openUrl",
+			"objectName": null,
+			"parameterValues": "[&{url}]",
+			"expectedValues": null,
+			"outputValues": null,
+			"comments": "打开浏览并输入指定的url"
+		}, {
+			"scriptId": null,
+			"step": "2",
+			"keword": "getElementValue",
+			"objectName": "BaiduPageAction.settingLink",
+			"parameterValues": null,
+			"expectedValues": null,
+			"outputValues": "[@{settingLinkVal}]",
+			"comments": "获取对应Element的文本，输出到指定的参数中"
+		}],
+		"status": "Y",
+		"datas": [{
+			"datasId": "datasid_1",
+			"searchValue": "welcome1",
+			"password": null,
+			"no": "1"
+		}, {
+			"datasId": "datasid_2",
+			"searchValue": "welcome2",
+			"password": null,
+			"no": "2"
+		}]
+	}, {
+		"caseId": "case2",
+		"caseName": "casename2",
+		"scripts": null,
+		"status": "N",
+		"datas": null
+	}]
+}, {
+	"moduleId": "2",
+	"moduleName": "testSinaModule",
+	"testCases": null
+}]

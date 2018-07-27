@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+
+
+    <input type="button" value="click" onclick="myclick()">
+
+    <input type="button" value="change" onclick="change('testPlanProject.json')">
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+
+  <script src="./datasource.js" ></script>
+
+  <script>
+      function myclick(){
+          //var DataSource = require('./datasource.js');
+          datasource = new DataSource();
+          console.log(datasource);
+          console.log(datasource.queryValueByKey("user"));
+      }
+
+
+      function change(){
+          //var DataSource = require('./datasource.js');
+          datasource = new DataSource();
+          console.log(datasource);
+          console.log(datasource.selectJason("testPlanProject.json"));
+          console.log(datasource.queryValueByKey("version"));
+      }
+
+  </script>
+</html>
