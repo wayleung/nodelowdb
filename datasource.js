@@ -41,6 +41,7 @@ const db = low(adapter)*/
 var adapter = new FileSync('db.json')
 var db = low(adapter)
 db._.mixin(lodashId)
+_.mixin(lodashId)
 
 class DataSource{
 /*    var testdata = {
@@ -59,7 +60,9 @@ class DataSource{
     changeJson(jsonfile) {
         adapter = new FileSync(jsonfile)
         db = low(adapter)
+        //console.log(lodashId)
         db._.mixin(lodashId)
+        _.mixin(lodashId)
         return db.value();
     }
 
@@ -155,7 +158,9 @@ class DataSource{
             .value()
     }
 
-
+    getCount(){
+        return db.size().value()
+    }
 
 
 
@@ -189,7 +194,113 @@ class DataSource{
     }
 
 
-    test() {
+
+
+    //返回module基本信息
+    getModulenfo() {
+        var size = db.value().length;
+        //console.log(size)
+        var obj = new Object();
+        obj.text = "root";
+
+        var modules = new Array();
+        for (var i = 0; i < size; i++) {
+            var temp = db.get([i]).value();
+
+            var module = new Object();
+            module.moduleId = temp.moduleId;
+            module.text = temp.moduleName;
+            //console.log(temp.moduleId);
+            //console.log(temp.moduleName);
+            modules[i] = module;
+        }
+        obj.children = modules;
+        var result = new Array();
+        result[0] = obj;
+        return JSON.stringify(result)
+
+
+    }
+
+
+    //返回Case基本信息
+    getCaseInfo(moduleId){
+        //console.log(db.get([0]).value().testCases);
+        //console.log(db.value());
+        var module = _.getById(db.value(), moduleId);
+        //console.log(module);
+        var cases = module.testCases;
+        var casesArray  = new Array();
+        for(var i=0;i<cases.length;i++){
+            var temp = new Object();
+            //console.log(cases[i].caseName);
+            //console.log(cases[i].status);
+            //console.log(cases[i].comment);
+            temp['Test Case Name']  = cases[i].caseName;
+            temp.Comment  = cases[i].comment;
+            temp.Execute =  cases[i].status;
+            casesArray[i] = temp;
+        }
+        return JSON.stringify(casesArray);
+    }
+
+
+
+    //返回script信息
+    getScriptInfo(moduleId,caseId){
+        var module = _.getById(db.value(), moduleId);
+        var cases = module.testCases;
+        var kase = _.getById(cases, caseId);
+        console.log(kase);
+        var scripts = kase.scripts;
+        var scriptsArray = new Array();
+        for(var i =0;i<scripts.length;i++){
+            var temp = new Object();
+            temp.Step  = scripts[i].step;
+            temp.Keyword =  scripts[i].keword;
+            temp['Object Name']  = scripts[i].objectName;
+            temp['Parameter Values']  = scripts[i].parameterValues;
+            temp['Expected Values']  = scripts[i].expectedValues;
+            temp['Output Values']  = scripts[i].outputValues;
+            temp.Comments  = scripts[i].comment;
+            scriptsArray[i] = temp;
+        }
+        return JSON.stringify(scriptsArray);
+    }
+
+
+    //返回script data 信息
+    getScriptDataInfo(moduleId,caseId){
+        var module = _.getById(db.value(), moduleId);
+        var cases = module.testCases;
+        var kase = _.getById(cases, caseId);
+        console.log(kase);
+        var datas = kase.datas;
+        var datasArray = new Array();
+        for(var i =0;i<datas.length;i++){
+            var temp = new Object();
+            temp.datasId  = datas[i].datasId;
+            temp.searchValue =  datas[i].searchValue;
+            temp.password  = datas[i].password;
+            temp['No.']  = datas[i].no;
+            datasArray[i] = temp;
+        }
+        return JSON.stringify(datasArray);
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+            test() {
         //db=changeJson('db.json');
         adapter = new FileSync('testPlanProject.json')
         db = low(adapter)

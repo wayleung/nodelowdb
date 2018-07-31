@@ -15,7 +15,7 @@
 
     <!--<input type="button" value="click" onclick="myclick()">-->
 
-    <input type="button" value="change" onclick="change('testPlanProject.json')">
+    <!--<input type="button" value="change" onclick="change('testPlanProject.json')">-->
 
     <input type="button" value="test" onclick="test()">
 
@@ -101,17 +101,24 @@
           //console.log(datasource.findByAttr('key','account'));
           //console.log(datasource.setValue('comment','aa123'));
 
-
-          console.log(datasource.changeJson("db.json"));
+          //console.log(datasource.changeJson("db.json"));
+          datasource.changeJson("modules.json");
 /*          console.log(datasource.getValue("user"));
           console.log(datasource.getCount("user"));
           console.log(datasource.getValue("arrays"))
           console.log(datasource.getCount("arrays"));*/
           //console.log(datasource.removeAttr("user3"))
           //console.log(datasource.insertObjToArray("arrays",{ id: 1, title: 'lowdb is awesome'}));
-          console.log(datasource.isExist("user"));
+/*          console.log(datasource.isExist("user"));
           console.log(datasource.isExist("posts[0]"));
-          console.log(datasource.isExist("posts[9]"));
+          console.log(datasource.isExist("posts[9]"));*/
+
+
+          //console.log(datasource.getModuleInfo());
+          //console.log(datasource.getCaseInfo("moduleid_1"));
+          //console.log(datasource.getScriptInfo("moduleid_1","case1"));
+          console.log(datasource.getScriptDataInfo("moduleid_1","case1"));
+
       }
 
 

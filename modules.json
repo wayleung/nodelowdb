@@ -1,29 +1,30 @@
 [{
-	"moduleId": "moduleid_1",
+	"id": "moduleid_1",
 	"moduleName": "testBaiduModule",
 	"testCases": [{
-		"caseId": "case1",
+		"id": "case1",
 		"caseName": "casename1",
 		"scripts": [{
-			"scriptId": null,
+			"id": "sid1",
 			"step": "1",
 			"keword": "openUrl",
 			"objectName": null,
 			"parameterValues": "[&{url}]",
 			"expectedValues": null,
 			"outputValues": null,
-			"comments": "打开浏览并输入指定的url"
+			"comment": "打开浏览并输入指定的url"
 		}, {
-			"scriptId": null,
+			"id": null,
 			"step": "2",
 			"keword": "getElementValue",
 			"objectName": "BaiduPageAction.settingLink",
 			"parameterValues": null,
 			"expectedValues": null,
 			"outputValues": "[@{settingLinkVal}]",
-			"comments": "获取对应Element的文本，输出到指定的参数中"
+			"comment": "获取对应Element的文本，输出到指定的参数中"
 		}],
 		"status": "Y",
+		"comment" :"comment1",
 		"datas": [{
 			"datasId": "datasid_1",
 			"searchValue": "welcome1",
@@ -36,14 +37,15 @@
 			"no": "2"
 		}]
 	}, {
-		"caseId": "case2",
+		"id": "case2",
 		"caseName": "casename2",
 		"scripts": null,
 		"status": "N",
+		"comment" :"comment2",
 		"datas": null
 	}]
 }, {
-	"moduleId": "moduleid_2",
+	"id": "moduleid_2",
 	"moduleName": "testSinaModule",
 	"testCases": null
 }]
