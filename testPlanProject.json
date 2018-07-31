@@ -1,4 +1,4 @@
-
+{
 	"totalAutoCase": "100",
 	"modules": ["moduleid_1","moduleid_2"],
 	"objectPages": ["BaiduPageAction","LoginPage"],
