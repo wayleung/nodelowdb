@@ -13,7 +13,7 @@
 
 
 
-    <input type="button" value="click" onclick="myclick()">
+    <!--<input type="button" value="click" onclick="myclick()">-->
 
     <input type="button" value="change" onclick="change('testPlanProject.json')">
 
@@ -27,26 +27,45 @@
 
   <script src="./datasource.js" ></script>
 
-  <script src="./test/test.js" ></script>
 
   <script>
+      var array = [
+          {id: 0, name: "aaa", age: 33},
+          {id: 1, name: "bbb", age: 25},
+          {id: 2, name: "aaa", age: 31}
+      ]
+
+
+      var object = {
+          student : [
+              {id: 0, name: "aaa", age: 33},
+              {id: 1, name: "bbb", age: 25}
+          ],
+          school : ["aa","bb"]
+      }
+
+
+
+
+
+      datasource = new DataSource();
       function myclick(){
           //var DataSource = require('./datasource.js');
-          datasource = new DataSource();
+
           console.log(datasource);
-          console.log(datasource.queryValueByKey("user"));
+          console.log(datasource.getValueByKey("user"));
       }
 
 
       function change(){
           //var DataSource = require('./datasource.js');
-          datasource = new DataSource();
+          //datasource = new DataSource();
           console.log(datasource);
-          console.log(datasource.selectJason("testPlanProject.json"));
-          console.log(datasource.queryValueByKey("version"));
+          console.log(datasource.changeJson("testPlanProject.json"));
+          console.log(datasource.getValueByKey("version"));
       }
 
-      function test() {
+/*      function test() {
           const aa = {
               posts: [
                   {id: 1, body: 'one', published: false},
@@ -58,7 +77,44 @@
               ]
           }
           console.log(_.getbyid(aa.posts, 1))
+      }*/
+
+
+      function test() {
+          // console.log(datasource.getAllKeys(object));
+           //console.log(_.find(array, ['age', 31]));
+       // console.log(datasource.getFromArrayByAttr(array,'age',25))
+
+/*          datasource.changeJson("db.json");
+          console.log(db.set('user.name', 'typicode')
+              .value());*/
+
+          //console.log(datasource.test());
+        //console.log(datasource.setValueFromObject(db,'student[0].age',55));
+       /* var testdata  = datasource.changeJson("testPlanProject.json");
+
+        console.log(testdata.get('testPlanProjectName').value());*/
+          //console.log(datasource.changeJson("globalDatas.json"));
+
+          //console.log(datasource.changeJson("testPlanProject.json"));
+          //console.log(datasource.setValue('modules[0].moduleName','aaaa'));
+          //console.log(datasource.findByAttr('key','account'));
+          //console.log(datasource.setValue('comment','aa123'));
+
+
+          console.log(datasource.changeJson("db.json"));
+/*          console.log(datasource.getValue("user"));
+          console.log(datasource.getCount("user"));
+          console.log(datasource.getValue("arrays"))
+          console.log(datasource.getCount("arrays"));*/
+          //console.log(datasource.removeAttr("user3"))
+          //console.log(datasource.insertObjToArray("arrays",{ id: 1, title: 'lowdb is awesome'}));
+          console.log(datasource.isExist("user"));
+          console.log(datasource.isExist("posts[0]"));
+          console.log(datasource.isExist("posts[9]"));
       }
+
+
 
 
   </script>

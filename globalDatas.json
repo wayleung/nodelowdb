@@ -1,11 +1,14 @@
-[{
-	"globalDataId": "globaldataid_2",
-	"key": "account",
-	"value": "123",
-	"comment": "comment2"
-}, {
-	"globalDataId": "globaldataid_1",
-	"key": "url",
-	"value": "https://www.baidu.com/",
-	"comment": "comment1"
-}]
+[
+  {
+    "globalDataId": "globaldataid_2",
+    "key": "account",
+    "value": "123",
+    "comment": "comment2"
+  },
+  {
+    "globalDataId": "globaldataid_1",
+    "key": "url",
+    "value": "https://www.baidu.com/",
+    "comment": "comment1"
+  }
+]

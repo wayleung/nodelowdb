@@ -1,5 +1,5 @@
 [{
-	"moduleId": "1",
+	"moduleId": "moduleid_1",
 	"moduleName": "testBaiduModule",
 	"testCases": [{
 		"caseId": "case1",
@@ -43,7 +43,7 @@
 		"datas": null
 	}]
 }, {
-	"moduleId": "2",
+	"moduleId": "moduleid_2",
 	"moduleName": "testSinaModule",
 	"testCases": null
 }]
