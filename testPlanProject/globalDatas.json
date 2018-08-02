@@ -1,0 +1,20 @@
+[
+  {
+    "id": "globaldataid_1",
+    "key": "account",
+    "value": "123",
+    "comment": "comment2"
+  },
+  {
+    "id": "globaldataid_2",
+    "key": "url",
+    "value": "https://www.baidu.com/",
+    "comment": "comment1"
+  },
+  {
+    "id": "globaldataid_4",
+    "key": "url222233",
+    "value": "https://www.baidu.com/111",
+    "comment": "comment1111"
+  }
+]

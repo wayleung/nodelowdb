@@ -1,0 +1,99 @@
+[
+  {
+    "id": "moduleid_1",
+    "moduleName": "testBaiduModule",
+    "testCases": [
+      {
+        "id": "case1",
+        "caseName": "casename1",
+        "scripts": [
+          {
+            "id": "sid1",
+            "step": "1",
+            "keword": "openUrl",
+            "objectName": null,
+            "parameterValues": "[&{url}]",
+            "expectedValues": null,
+            "outputValues": null,
+            "comment": "打开浏览并输入指定的url"
+          },
+          {
+            "id": "sid33",
+            "step": "2",
+            "keword": "getElementValue",
+            "objectName": "BaiduPageAction.settingLink",
+            "parameterValues": null,
+            "expectedValues": null,
+            "outputValues": "[@{settingLinkVal}]",
+            "comment": "获取对应Element的文本，输出到指定的参数中"
+          }
+        ],
+        "status": "Y",
+        "comment": "comment1",
+        "datas": [
+          {
+            "datasId": "datasid_1",
+            "searchValue": "welcome1",
+            "password": null,
+            "no": "1"
+          },
+          {
+            "datasId": "datasid_2",
+            "searchValue": "welcome2",
+            "password": null,
+            "no": "2"
+          }
+        ]
+      },
+      {
+        "id": "case3",
+        "caseName": "casename2",
+        "scripts": [],
+        "status": null,
+        "comment": "comment2",
+        "datas": []
+      }
+    ]
+  },
+  {
+    "id": "moduleid_2",
+    "moduleName": "testSinaModule2222333",
+    "testCases": [
+      {
+        "id": "case2",
+        "caseName": "casename2",
+        "scripts": [],
+        "status": "N",
+        "comment": "comment2",
+        "datas": []
+      },
+      {
+        "id": "case4",
+        "caseName": "casename22223333",
+        "scripts": [],
+        "status": "N",
+        "comment": "comment2",
+        "datas": []
+      },
+      {
+        "id": "case11",
+        "caseName": "casename22223333",
+        "comment": "comment2",
+        "status": "N",
+        "scripts": [
+          {
+            "id": "sid11111",
+            "step": "1",
+            "keword": "openUrl",
+            "objectName": null,
+            "parameterValues": "[&{url}]",
+            "expectedValues": null,
+            "outputValues": null,
+            "comment": "打开浏览并输入指定的url"
+          }
+        ],
+        "datas": []
+      }
+    ]
+  }
+]

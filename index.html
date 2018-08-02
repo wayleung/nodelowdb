@@ -26,9 +26,14 @@
   </body>
 
   <script src="./datasource.js" ></script>
-
+<!--<script>var DataSourceObject = require('./datasource.js');</script>-->
 
   <script>
+
+      //console.log(DataSourceObject);
+      //datasource = new DataSourceObject.DataSource();
+      datasource = new DataSource();
+      //console.log("datasource:",datasource);
       var array = [
           {id: 0, name: "aaa", age: 33},
           {id: 1, name: "bbb", age: 25},
@@ -48,7 +53,7 @@
 
 
 
-      datasource = new DataSource();
+      //datasource = new DataSource();
       function myclick(){
           //var DataSource = require('./datasource.js');
 
@@ -61,7 +66,7 @@
           //var DataSource = require('./datasource.js');
           //datasource = new DataSource();
           console.log(datasource);
-          console.log(datasource.changeJson("testPlanProject.json"));
+          console.log(datasource.setJson("testPlanProject.json"));
           console.log(datasource.getValueByKey("version"));
       }
 
@@ -85,24 +90,33 @@
            //console.log(_.find(array, ['age', 31]));
        // console.log(datasource.getFromArrayByAttr(array,'age',25))
 
-/*          datasource.changeJson("db.json");
+/*          datasource.setJson("db.json");
           console.log(db.set('user.name', 'typicode')
               .value());*/
 
           //console.log(datasource.test());
         //console.log(datasource.setValueFromObject(db,'student[0].age',55));
-       /* var testdata  = datasource.changeJson("testPlanProject.json");
+       /* var testdata  = datasource.setJson("testPlanProject.json");
 
         console.log(testdata.get('testPlanProjectName').value());*/
-          //console.log(datasource.changeJson("globalDatas.json"));
+          //console.log(datasource.setJson("globalDatas.json"));
 
-          //console.log(datasource.changeJson("testPlanProject.json"));
+          //console.log(datasource.setJson("testPlanProject.json"));
           //console.log(datasource.setValue('modules[0].moduleName','aaaa'));
           //console.log(datasource.findByAttr('key','account'));
           //console.log(datasource.setValue('comment','aa123'));
 
-          //console.log(datasource.changeJson("db.json"));
-          datasource.changeJson("modules.json");
+          //console.log(datasource.setJson("db.json"));
+          //datasource.setJson("globalDatas.json");
+
+
+          //datasource.setJson("objectPages.json");
+
+
+          datasource.setJson("modules.json");
+
+
+
 /*          console.log(datasource.getValue("user"));
           console.log(datasource.getCount("user"));
           console.log(datasource.getValue("arrays"))
@@ -113,11 +127,43 @@
           console.log(datasource.isExist("posts[0]"));
           console.log(datasource.isExist("posts[9]"));*/
 
-
+          //console.log(datasource.getAllFromJson());
           //console.log(datasource.getModuleInfo());
           //console.log(datasource.getCaseInfo("moduleid_1"));
           //console.log(datasource.getScriptInfo("moduleid_1","case1"));
-          console.log(datasource.getScriptDataInfo("moduleid_1","case1"));
+         //console.log(datasource.getScriptDataInfo("moduleid_1","case1"));
+          //datasource.setProjectName('test');
+          //console.log(datasource.getProjectName());
+          //console.log(datasource.getGlobalData("globaldataid_2"));
+          //console.log(datasource.insertGlobalData('{ "id": "globaldataid_7","key": "url","value": "https://www.baidu.com/","comment": "comment1"}'));
+          //console.log(datasource.removeGlobalData('globaldataid_3'));
+          //console.log(datasource.updateGlobalData('{ "id": "globaldataid_4","key": "url222233","value": "https://www.baidu.com/111","comment": "comment1111"}'));
+          //console.log(datasource.getObjectPage('BaiduPageAction'));
+          //console.log(datasource.insertObjectPage('{"objectPageName":"BaiduPageAction","objectElements":[{"objectName":"settingLink","objectId":"elementid_1","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null},{"objectName":"searchInput\\n","objectId":"elementid_2","objectXpath":"//input[@name=\'wd\']","comment":null},{"objectName":"searchBtn","objectId":"su","objectXpath":"//button[text()=\'NEXT\']","comment":null}]}'));
+          //console.log(datasource.removeObjectPage('BaiduPageAction11'));
+          //console.log(datasource.updateObjectPage('{"objectPageName":"BaiduPageAction11","objectElements":[{"objectName":"settingLink","objectId":"elementid_1111","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null},{"objectName":"searchInput\\n","objectId":"elementid_2","objectXpath":"//input[@name=\'wd\']","comment":null},{"objectName":"searchBtn","objectId":"su","objectXpath":"//button[text()=\'NEXT\']","comment":null}]}'));
+
+          //var obj  =  JSON.parse('{"id":"moduleid_3","moduleName":"testSinaModule","testCases":[]}');
+          //var obj  =  JSON.parse('{"id":"moduleid_2","moduleName":"testSinaModule2222333","testCases":[]}');
+          //console.log(datasource.insertModule(obj));
+
+
+          //console.log(datasource.removeModule('testSinaModule2'));
+          //console.log(datasource.updateModule(obj));
+          //var datasource  = getDataSource("testPlanProject","objectPages.json");
+          //var obj  = JSON.parse('{"id":"case2","caseName":"casename2","scripts":null,"status":"N","comment":"comment2","datas":null}');
+          //console.log(datasource.insertCase("moduleid_2",obj));
+
+          //var obj  = JSON.parse('{"id":"case1","Test Case Name":"casename22223333","Execute":"N","Comment":"comment2"}');
+          //console.log(datasource.getScriptDataInfo('case1'));
+          //var obj  = JSON.parse('{"id":"sid11111","step":"1","keword":"openUrl","objectName":null,"parameterValues":"[&{url}]","expectedValues":null,"outputValues":null,"comment":"打开浏览并输入指定的url"}');
+          //console.log(datasource.insertScript('case11',obj));
+
+
+          //var obj  = JSON.parse('{"id":"sid11111","step":"1","keword":"openUrl","objectName":null,"parameterValues":"[&{url}]","expectedValues":null,"outputValues":null,"comment":"打开浏览并输入指定的url"}');
+          //console.log(datasource.insertScript('case11',obj));
+          console.log(datasource.getDataInfo('case1'));
+          //updateScript
 
       }
 
