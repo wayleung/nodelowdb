@@ -34,7 +34,7 @@
       //datasource = new DataSourceObject.DataSource();
       datasource = new DataSource();
       //console.log("datasource:",datasource);
-      var array = [
+      /*var array = [
           {id: 0, name: "aaa", age: 33},
           {id: 1, name: "bbb", age: 25},
           {id: 2, name: "aaa", age: 31}
@@ -49,7 +49,7 @@
           school : ["aa","bb"]
       }
 
-
+*/
 
 
 
@@ -155,15 +155,39 @@
           //console.log(datasource.insertCase("moduleid_2",obj));
 
           //var obj  = JSON.parse('{"id":"case1","Test Case Name":"casename22223333","Execute":"N","Comment":"comment2"}');
-          //console.log(datasource.getScriptDataInfo('case1'));
+          //console.log(datasource.getScriptInfo('case1'));
           //var obj  = JSON.parse('{"id":"sid11111","step":"1","keword":"openUrl","objectName":null,"parameterValues":"[&{url}]","expectedValues":null,"outputValues":null,"comment":"打开浏览并输入指定的url"}');
           //console.log(datasource.insertScript('case11',obj));
 
 
-          //var obj  = JSON.parse('{"id":"sid11111","step":"1","keword":"openUrl","objectName":null,"parameterValues":"[&{url}]","expectedValues":null,"outputValues":null,"comment":"打开浏览并输入指定的url"}');
-          //console.log(datasource.insertScript('case11',obj));
-          console.log(datasource.getDataInfo('case1'));
+          //var obj  = JSON.parse('{"id":"sid6666","step":"3"}');
+          //console.log(datasource.insertScript('case1',obj));
+
+          //var obj  = JSON.parse('{"id":"sid12424233","step":"4"}');
+          //console.log(datasource.updateScript(obj));
+          //console.log(datasource.getDataInfo('case1'));
+
+          //datasource.removeScript('sid6666'));
           //updateScript
+
+          //console.log(datasource.getObjectPageInfo());
+          //console.log(datasource.getObjectPage('ooo111'));
+          //console.log(datasource.getDataInfo("case1"));
+
+          //console.log(datasource.insertDataColumn("case1","kkeyyy11","valueeee11"));
+          //console.log(datasource.removeData("28958063-e0b9-4d30-9899-1f134cc2e046"));
+          //console.log(datasource.removeObjectElement("3333"));
+          //console.log(datasource.removeObjectElement("1daee77c-ae81-4187-9f19-f5219e7a62f0"));
+          //var array  = JSON.parse('[{"id":"333","objectName":"settingLink","objectId":"elementid_1","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null},{"id":"444","objectName":"settingLink","objectId":"elementid_1","objectXpath":"//a[@name=\'tj_trhao123\']","comment":null}]');
+          //console.log(datasource.removeObjectElementByArray(array));
+
+          //console.log(datasource.getDataKeys("case1"));
+          // console.log(datasource.getGlobalDataInfo());
+          //console.log(datasource.getProjectInfo());
+
+          //console.log(datasource.createProject("cccc"));
+
+          datasource.updateFileDirectory("./data/cccc/","./data/ddd/")
 
       }
 
